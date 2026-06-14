@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>infeos® — Künstliche Intelligenz, die sich rechnet | KI für Unternehmen</title>
+<meta name="description" content="infeos macht KI in deinem Unternehmen messbar. Berechne in 60 Sekunden, was dich fehlende KI kostet — und wie viel du mit der richtigen Umsetzung sparst. Softwareentwicklung seit 1986, zertifiziert von der Universität Helsinki. Aus Bozen, Südtirol." />
+<meta name="theme-color" content="#060c1d" />
+<meta property="og:title" content="infeos® — Künstliche Intelligenz, die sich rechnet" />
+<meta property="og:description" content="Berechne in 60 Sekunden, was dich fehlende KI im Monat kostet — und wie viel du mit der richtigen KI-Umsetzung sparst." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+<link rel="canonical" href="https://infeos.eu/" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="bg-atmosphere"></div>
+<div class="bg-grain"></div>
+
+<!-- ============================= NAV ============================= -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="logo" aria-label="infeos Startseite">
+      <svg class="logo__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="48" y2="48">
+            <stop offset="0" stop-color="#38e1e6"/><stop offset=".55" stop-color="#16bcc4"/><stop offset="1" stop-color="#7b5cff"/>
+          </linearGradient>
+        </defs>
+        <path d="M14 30c-5 0-9-3.6-9-8.4 0-4.4 3.4-7.9 7.9-8.3C15 9.4 19 7 23.6 7c5.5 0 10 3.6 11 8.5 4.2.5 7.4 3.7 7.4 7.7 0 4.3-3.7 7.8-8.3 7.8H14Z" stroke="url(#lg)" stroke-width="2.2"/>
+        <circle cx="17" cy="20.5" r="1.7" fill="#38e1e6"/><circle cx="24" cy="20.5" r="1.7" fill="#16bcc4"/><circle cx="31" cy="20.5" r="1.7" fill="#7b5cff"/>
+      </svg>
+      <span>
+        <span class="logo__word">infeos<sup>®</sup></span>
+        <span class="logo__tag">ideen in software</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="#problem">Was kann KI</a>
+      <a href="#usecases">Use Cases</a>
+      <a href="#rechner">KI-Rechner</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#vorgehen">Vorgehen</a>
+      <a href="#ueber">Über uns</a>
+    </nav>
+
+    <div class="nav__right">
+      <a href="#rechner" class="btn nav__cta">KI-Rechner starten
+        <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#problem">Was kann KI</a>
+  <a href="#usecases">Use Cases</a>
+  <a href="#rechner">KI-Rechner</a>
+  <a href="#leistungen">Leistungen</a>
+  <a href="#vorgehen">Vorgehen</a>
+  <a href="#ueber">Über uns</a>
+  <a href="#rechner" class="btn">KI-Rechner starten →</a>
+</div>
+
+<main id="top">
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="hero__aurora" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__content reveal in">
+      <span class="eyebrow"><span class="dot"></span>KI optimal nutzen · Software seit 1986</span>
+      <h1 class="display hero__title">
+        Künstliche Intelligenz,<br>die sich <span class="serif-italic grad-text">rechnet.</span>
+      </h1>
+      <p class="lead hero__sub">
+        Wer mit ChatGPT Texte schreibt, ist im <b>Spielstadium</b> von KI. Wir analysieren deine
+        Prozesse, zeigen dir <b>auf den Euro genau</b>, was fehlende KI kostet — und setzen die
+        Lösung um. Software · interaktive Bots · Webseiten · Apps mit KI.
+      </p>
+      <div class="hero__actions">
+        <a href="#rechner" class="btn btn--lg">
+          Was kostet dich fehlende KI?
+          <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#kontakt" class="btn btn--ghost btn--lg">Kostenloses Erstgespräch</a>
+      </div>
+      <div class="hero__badges">
+        <span class="chip">📄 Hunderte Dokumente in Sekunden vergleichen</span>
+        <span class="chip">🤖 Interactive Bot · +60 % Produktivität</span>
+        <span class="chip">🎓 Zertifiziert · Universität Helsinki</span>
+      </div>
+    </div>
+
+    <!-- Live damage teaser -->
+    <aside class="hero__card reveal in" data-delay="2" aria-label="KI-Verlustrechner Vorschau">
+      <div class="hero-calc">
+        <div class="hero-calc__top">
+          <span class="hero-calc__tag mono">LIVE · KI-Verlustrechner</span>
+          <span class="hero-calc__pulse" aria-hidden="true"></span>
+        </div>
+        <p class="hero-calc__label">So viel verbrennt ein Ø-Mittelständler <b>pro Monat</b> durch fehlende KI:</p>
+        <div class="hero-calc__number">
+          <span class="euro">€</span><span id="heroCounter" data-to="38500">0</span>
+        </div>
+        <div class="hero-calc__bars">
+          <div class="hero-calc__bar"><span style="--w:78%"></span><small>Manuelle Routinearbeit</small></div>
+          <div class="hero-calc__bar"><span style="--w:54%"></span><small>Datenpflege &amp; Suche</small></div>
+          <div class="hero-calc__bar"><span style="--w:42%"></span><small>Langsamer Service</small></div>
+        </div>
+        <a href="#rechner" class="btn btn--block">Eigenen Wert berechnen
+          <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="hero-calc__hint mono">Auf Basis deiner Zahlen · PDF-Auswertung in 60 Sek.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Marquee trust strip -->
+  <div class="trust-marquee" aria-hidden="true">
+    <div class="trust-marquee__track">
+      <span>Künstliche Intelligenz</span><span class="sep">✦</span>
+      <span>KI Beispiele &amp; Use Cases</span><span class="sep">✦</span>
+      <span>KI für Südtirol</span><span class="sep">✦</span>
+      <span>Was kann KI</span><span class="sep">✦</span>
+      <span>KI Consult</span><span class="sep">✦</span>
+      <span>Software seit 1986</span><span class="sep">✦</span>
+      <span>Künstliche Intelligenz</span><span class="sep">✦</span>
+      <span>KI Beispiele &amp; Use Cases</span><span class="sep">✦</span>
+      <span>KI für Südtirol</span><span class="sep">✦</span>
+      <span>Was kann KI</span><span class="sep">✦</span>
+      <span>KI Consult</span><span class="sep">✦</span>
+      <span>Software seit 1986</span><span class="sep">✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PROBLEM ============================= -->
+<section class="section-pad" id="problem">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="dot"></span>Profitierst du schon — oder spielst du noch?</span>
+      <h2 class="section-title">KI ist kein Spielzeug der<br><span class="grad-text">Marketing&shy;abteilung.</span></h2>
+      <p class="lead">KI verschafft Zugang zu Expertenwissen, ermöglicht fundierte Entscheidungen, erhöht die
+        Qualität deines Outputs, spart Zeit — und erledigt Aufgaben. Die Frage ist nur:
+        <b>Hebst du dieses Potenzial schon, oder verschenkst du es jeden Tag?</b></p>
+    </div>
+
+    <div class="potential-grid">
+      <article class="pcard pcard--magenta reveal" data-delay="1">
+        <div class="pcard__glow" aria-hidden="true"></div>
+        <div class="pcard__num mono">01</div>
+        <h3>Wo liegt dein größtes Potenzial?</h3>
+        <p>Lass uns sehen, wo dein größter Hebel ist — so, dass du <b>in 4 Wochen</b> den ersten messbaren Erfolg erzielst, nachdem KI eingeführt wurde.</p>
+        <a href="#rechner" class="link-arrow">KI-Potenzial berechnen →</a>
+      </article>
+      <article class="pcard pcard--violet reveal" data-delay="2">
+        <div class="pcard__glow" aria-hidden="true"></div>
+        <div class="pcard__num mono">02</div>
+        <h3>KI-Strategie — wie sieht deine aus?</h3>
+        <p>Die erfolgreichsten <b>5 %</b> der Unternehmen erreichen einen ROI von <b>8</b>. Der Unterschied? Alle haben eine klare Strategie für KI.</p>
+        <a href="#kontakt" class="link-arrow">KI-Strategie entwickeln →</a>
+      </article>
+      <article class="pcard pcard--teal reveal" data-delay="3">
+        <div class="pcard__glow" aria-hidden="true"></div>
+        <div class="pcard__num mono">03</div>
+        <h3>Echte Use Cases — für den Anfang</h3>
+        <p>KI kann Angebote schreiben, klar. Aber wo geht wirklich die Post ab? <b>+60 % Produktivität</b>. Keine Tools — echte Anwendungen.</p>
+        <a href="#usecases" class="link-arrow">Use Cases ansehen →</a>
+      </article>
+      <article class="pcard pcard--blue reveal" data-delay="4">
+        <div class="pcard__glow" aria-hidden="true"></div>
+        <div class="pcard__num mono">04</div>
+        <h3>Wie führt man KI ein?</h3>
+        <p>Es gibt <b>5 wesentliche Schritte</b> zur erfolgreichen Einführung — von der Analyse der Prozesse bis zur Auswertung der Veränderungen.</p>
+        <a href="#vorgehen" class="link-arrow">Der 5-Punkte-Plan →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= KI-VERLUSTRECHNER (integriert) ============================= -->
+<section class="section-pad calc-embed" id="rechner">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="dot"></span>KI muss sich rechnen!</span>
+      <h2 class="section-title">Was kostet dich <span class="serif-italic grad-text-magenta">fehlende KI?</span></h2>
+      <p class="lead">Kein Bauchgefühl, keine Marketing-Zahl. Gib deine echten Kennzahlen ein — wie viel Zeit dein
+        CRM frisst, wie viel manuell läuft, wie viele Mitarbeiter das bedienen — und sieh <b>rein mathematisch</b>,
+        wie viel Geld jeden Monat verloren geht. Plus: wie viel du mit der richtigen KI-Umsetzung zurückholst.</p>
+    </div>
+
+    <div class="calc-embed__inner" id="rechner-form">
+      <!-- LIVE BAR -->
+      <div class="live-bar">
+        <div class="live-bar__inner">
+          <div class="live-bar__left">
+            <span class="live-bar__dot" aria-hidden="true"></span>
+            <div>
+              <div class="live-bar__label">Verlust / Monat · live</div>
+              <div class="live-bar__num"><span class="euro">€</span> <span id="lpMonth">—</span></div>
+            </div>
+          </div>
+          <div class="live-bar__year">Hochgerechnet aufs Jahr: <b id="lpYear">—</b></div>
+          <div class="live-bar__hint">Werte anpassen → Zahl aktualisiert sich</div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <form class="calc-form" id="calcForm" autocomplete="off">
+
+        <!-- 01 Unternehmen -->
+        <fieldset class="calc-section">
+          <div class="calc-section__head">
+            <span class="calc-section__num">01</span>
+            <legend class="calc-section__title">Dein Unternehmen</legend>
+          </div>
+          <p class="calc-section__desc">Damit wir mit realistischen Vollkosten rechnen.</p>
+          <div class="grid-2">
+            <div class="field">
+              <div class="field__top"><span class="field__label">Branche</span></div>
+              <div class="field__inputwrap">
+                <select class="field__select" id="branche">
+                  <option value="dienstleistung">Dienstleistung &amp; Beratung</option>
+                  <option value="produktion">Produktion &amp; Industrie</option>
+                  <option value="handel">Handel &amp; E-Commerce</option>
+                  <option value="handwerk">Bau &amp; Handwerk</option>
+                  <option value="tourismus">Tourismus &amp; Hotellerie</option>
+                  <option value="gesundheit">Gesundheit &amp; Pflege</option>
+                  <option value="sonstige">Sonstige</option>
+                </select>
+                <svg class="field__chev" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field__top"><span class="field__label">Mitarbeiter gesamt</span><span class="field__val" id="v_mitarbeiter">25</span></div>
+              <input type="range" id="mitarbeiter" min="1" max="500" step="1" value="25" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__top"><span class="field__label">Ø Personalkosten pro Stunde <small>Vollkosten inkl. Lohnnebenkosten</small></span><span class="field__val" id="v_kosten">55 €</span></div>
+            <input type="range" id="kosten" min="25" max="120" step="1" value="55" />
+          </div>
+        </fieldset>
+
+        <!-- 02 Routinearbeit -->
+        <fieldset class="calc-section">
+          <div class="calc-section__head">
+            <span class="calc-section__num">02</span>
+            <legend class="calc-section__title">Manuelle &amp; repetitive Routinearbeit</legend>
+          </div>
+          <p class="calc-section__desc">Der größte KI-Hebel: wiederkehrende Aufgaben, die heute Menschen von Hand erledigen.</p>
+          <div class="grid-2">
+            <div class="field">
+              <div class="field__top"><span class="field__label">Mitarbeiter mit Routineaufgaben</span><span class="field__val" id="v_routineMA">10</span></div>
+              <input type="range" id="routineMA" min="0" max="200" step="1" value="10" />
+            </div>
+            <div class="field">
+              <div class="field__top"><span class="field__label">Ø Stunden / Woche pro MA</span><span class="field__val" id="v_routineStd">12 h</span></div>
+              <input type="range" id="routineStd" min="0" max="40" step="0.5" value="12" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__top"><span class="field__label">Davon durch KI automatisierbar <small>konservativ — wir rechnen lieber zu niedrig</small></span><span class="field__val" id="v_autoRoutine">45 %</span></div>
+            <input type="range" id="autoRoutine" min="10" max="80" step="1" value="45" />
+          </div>
+        </fieldset>
+
+        <!-- 03 Daten & Dokumente -->
+        <fieldset class="calc-section">
+          <div class="calc-section__head">
+            <span class="calc-section__num">03</span>
+            <legend class="calc-section__title">Datenpflege, Dokumente &amp; Suche</legend>
+          </div>
+          <p class="calc-section__desc">CRM-Pflege, Copy-Paste zwischen Systemen, Dokumente suchen &amp; vergleichen.</p>
+          <div class="grid-2">
+            <div class="field">
+              <div class="field__top"><span class="field__label">Stunden / Woche im Team gesamt</span><span class="field__val" id="v_dataStd">25 h</span></div>
+              <input type="range" id="dataStd" min="0" max="200" step="1" value="25" />
+            </div>
+            <div class="field">
+              <div class="field__top"><span class="field__label">Davon durch KI automatisierbar</span><span class="field__val" id="v_autoData">60 %</span></div>
+              <input type="range" id="autoData" min="10" max="90" step="1" value="60" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 04 Service -->
+        <fieldset class="calc-section">
+          <div class="calc-section__head">
+            <span class="calc-section__num">04</span>
+            <legend class="calc-section__title">Kundenservice &amp; Anfragen</legend>
+          </div>
+          <p class="calc-section__desc">Wiederkehrende Standardanfragen, die ein interaktiver Bot übernehmen kann.</p>
+          <div class="grid-2">
+            <div class="field">
+              <div class="field__top"><span class="field__label">Anfragen / Tickets pro Monat</span><span class="field__val" id="v_anfragen">400</span></div>
+              <input type="range" id="anfragen" min="0" max="5000" step="10" value="400" />
+            </div>
+            <div class="field">
+              <div class="field__top"><span class="field__label">Ø Bearbeitungszeit / Anfrage</span><span class="field__val" id="v_minProAnfrage">9 min</span></div>
+              <input type="range" id="minProAnfrage" min="1" max="45" step="1" value="9" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__top"><span class="field__label">Anteil Standardanfragen (bot-fähig)</span><span class="field__val" id="v_standardAnteil">50 %</span></div>
+            <input type="range" id="standardAnteil" min="0" max="90" step="1" value="50" />
+          </div>
+        </fieldset>
+
+        <!-- 05 Fehler -->
+        <fieldset class="calc-section">
+          <div class="calc-section__head">
+            <span class="calc-section__num">05</span>
+            <legend class="calc-section__title">Fehler &amp; Nacharbeit</legend>
+          </div>
+          <p class="calc-section__desc">Korrekturen, Rückfragen und Doppelarbeit durch Medienbrüche &amp; Inkonsistenz.</p>
+          <div class="field">
+            <div class="field__top"><span class="field__label">Stunden / Woche im Team für Nacharbeit</span><span class="field__val" id="v_fehlerStd">8 h</span></div>
+            <input type="range" id="fehlerStd" min="0" max="100" step="1" value="8" />
+          </div>
+        </fieldset>
+
+        <!-- 06 Chancen -->
+        <fieldset class="calc-section">
+          <div class="calc-section__head">
+            <span class="calc-section__num">06</span>
+            <legend class="calc-section__title">Entgangene Aufträge durch langsame Reaktion</legend>
+          </div>
+          <p class="calc-section__desc">Leads, die kalt werden, weil niemand schnell genug reagiert. KI antwortet sofort, 24/7.</p>
+          <div class="grid-2">
+            <div class="field">
+              <div class="field__top"><span class="field__label">Leads / Anfragen pro Monat</span><span class="field__val" id="v_leads">60</span></div>
+              <input type="range" id="leads" min="0" max="2000" step="5" value="60" />
+            </div>
+            <div class="field">
+              <div class="field__top"><span class="field__label">Ø Wert pro Auftrag <small>Deckungsbeitrag / Marge</small></span><span class="field__val" id="v_dealWert">1.500 €</span></div>
+              <input type="range" id="dealWert" min="0" max="20000" step="100" value="1500" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__top"><span class="field__label">Anteil verlorener Leads durch zu langsame Reaktion</span><span class="field__val" id="v_verloren">8 %</span></div>
+            <input type="range" id="verloren" min="0" max="40" step="1" value="8" />
+          </div>
+        </fieldset>
+
+        <div class="calc-actions">
+          <button type="button" class="btn btn--magenta" id="calcBtn">
+            Meinen KI-Verlust berechnen
+            <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="calc-actions__note">Ergebnis sofort sichtbar · vollständige PDF-Auswertung optional</span>
+        </div>
+      </form>
+
+      <!-- LOADER -->
+      <div class="loader" id="loader">
+        <div class="loader__ring"></div>
+        <div class="loader__text" id="loaderText">Analysiere deine Prozesse …</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results" id="results" aria-live="polite">
+    <div class="container">
+
+      <div class="result-hero">
+        <div class="result-hero__glow" aria-hidden="true"></div>
+        <span class="result-hero__eyebrow"><span class="live-bar__dot" aria-hidden="true"></span>Dein Verlust durch fehlende KI</span>
+        <div class="result-hero__num"><span class="euro">€</span> <span id="r_month">0</span></div>
+        <p class="result-hero__sub">Diese Summe verliert dein Unternehmen <b>jeden Monat</b> — rein rechnerisch aus deinen Eingaben:
+          Zeit für manuelle Arbeit, Datenchaos, langsamen Service, Fehler und entgangene Aufträge.</p>
+        <div class="result-hero__year">
+          <div class="bad">Hochgerechnet aufs Jahr<b>€ <span id="r_year">0</span></b></div>
+          <div class="good">Davon realisierbar mit infeos<b>€ <span id="r_save">0</span> / Jahr</b></div>
+        </div>
+      </div>
+
+      <div class="save-callout">
+        <div class="save-callout__icon">∑</div>
+        <div>
+          <div class="save-callout__title">Konservativ gerechnet könntest du mit der richtigen KI-Umsetzung <b>≈ € <span id="r_saveMonth">0</span> pro Monat</b> zurückholen.</div>
+          <p>Das entspricht der Arbeitsleistung von <b id="r_fte">0</b> Vollzeitkräften, die heute in vermeidbarer Routine gebunden sind — Kapazität, die du in Wachstum stecken kannst.</p>
+        </div>
+      </div>
+
+      <!-- LEAD GATE -->
+      <div class="lead-card" id="leadCard">
+        <div class="lead-card__glow" aria-hidden="true"></div>
+        <div id="leadFormView">
+          <span class="eyebrow"><span class="dot"></span>Vollständige Auswertung</span>
+          <h2>Hol dir die <span class="hl">komplette PDF-Auswertung.</span></h2>
+          <p class="lead-card__sub">Die detaillierte Aufschlüsselung jedes Verlust-Postens, das Einsparpotenzial pro Bereich
+            und konkrete erste Schritte — als gebrandetes PDF, sofort zum Download. Dauert keine 30&nbsp;Sekunden.</p>
+          <div class="lead-form">
+            <div class="lead-field">
+              <label for="l_vorname">Vorname <span class="req">*</span></label>
+              <input type="text" id="l_vorname" autocomplete="given-name" />
+              <span class="err" id="e_vorname">Bitte Vornamen angeben</span>
+            </div>
+            <div class="lead-field">
+              <label for="l_nachname">Nachname <span class="req">*</span></label>
+              <input type="text" id="l_nachname" autocomplete="family-name" />
+              <span class="err" id="e_nachname">Bitte Nachnamen angeben</span>
+            </div>
+            <div class="lead-field full">
+              <label for="l_firma">Firma <span class="req">*</span></label>
+              <input type="text" id="l_firma" autocomplete="organization" />
+              <span class="err" id="e_firma">Bitte Firmennamen angeben</span>
+            </div>
+            <div class="lead-field">
+              <label for="l_email">E-Mail <span class="req">*</span></label>
+              <input type="email" id="l_email" autocomplete="email" />
+              <span class="err" id="e_email">Bitte gültige E-Mail-Adresse</span>
+            </div>
+            <div class="lead-field">
+              <label for="l_telefon">Telefon</label>
+              <input type="tel" id="l_telefon" autocomplete="tel" placeholder="optional" />
+            </div>
+            <div class="lead-field full">
+              <label for="l_position">Deine Position im Unternehmen</label>
+              <select id="l_position">
+                <option value="">— optional —</option>
+                <option>Geschäftsführung / Inhaber</option>
+                <option>IT / Digitalisierung</option>
+                <option>Marketing / Vertrieb</option>
+                <option>Operations / Produktion</option>
+                <option>Sonstige</option>
+              </select>
+            </div>
+            <div class="consent">
+              <input type="checkbox" id="l_consent" />
+              <label for="l_consent">Ich möchte die Auswertung per E-Mail erhalten und bin mit einer Kontaktaufnahme zur Besprechung der Ergebnisse einverstanden. Hinweise in der Datenschutzerklärung.</label>
+            </div>
+            <span class="err" id="e_consent" style="grid-column:1/-1; margin-top:-6px;">Bitte bestätigen</span>
+            <div class="lead-card__actions">
+              <button type="button" class="btn" id="leadBtn">
+                PDF erstellen &amp; herunterladen
+                <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span class="lead-card__trust">100 % kostenlos · kein Newsletter · DSGVO-konform</span>
+            </div>
+          </div>
+        </div>
+        <div class="lead-card__success" id="leadSuccess">
+          <div class="lead-card__success-icon">✓</div>
+          <h3>Deine Auswertung ist fertig.</h3>
+          <p>Das PDF wurde gerade heruntergeladen. Eine Kopie geht an dich raus und unser Team meldet sich innerhalb von 24&nbsp;Stunden, um deinen größten Hebel zu besprechen.</p>
+          <p id="leadSuccessNote" class="mono" style="font-size:12px;color:var(--muted);margin-top:10px;"></p>
+        </div>
+      </div>
+
+      <!-- BREAKDOWN (locked until lead) -->
+      <div class="breakdown-wrap locked" id="breakdownWrap">
+        <div class="breakdown-lock" id="breakdownLock">
+          <div class="breakdown-lock__badge">🔒</div>
+          <div class="breakdown-lock__text">Vollständige Aufschlüsselung — nach Eingabe deiner Daten freigeschaltet</div>
+          <button class="btn" type="button" id="unlockScroll">Jetzt freischalten ↑</button>
+        </div>
+        <div class="breakdown">
+          <div class="block">
+            <div class="block__head">
+              <h3><span class="block__pill">A</span>Verlust-Posten / Monat</h3>
+              <div class="block__sum bad">€ <span id="sum_loss">0</span></div>
+            </div>
+            <div id="loss_lines"></div>
+          </div>
+          <div class="block">
+            <div class="block__head">
+              <h3><span class="block__pill">B</span>Realisierbar mit infeos / Monat</h3>
+              <div class="block__sum good">€ <span id="sum_save">0</span></div>
+            </div>
+            <div class="bd-line">
+              <div class="bd-line__label">Konservativ realisierbares Einsparpotenzial
+                <small>≈ 70 % der adressierbaren Verluste (Ramp-up &amp; Change eingerechnet)</small>
+              </div>
+              <div class="bd-bar good"><span id="bar_save"></span></div>
+              <div class="bd-line__val good">€ <span id="val_save">0</span></div>
+            </div>
+          </div>
+
+          <div class="methodology">
+            <span class="tag">so rechnen wir →</span>
+            <b>Verlust / Monat</b> = manuelle Routine + Datenpflege + bot-fähiger Service + Fehler/Nacharbeit + entgangene Aufträge.
+            Zeitposten = Personen × Stunden × 4,33&nbsp;Wochen × Vollkostensatz, gewichtet mit dem konservativen Automatisierungsgrad.
+            Entgangene Aufträge = Leads × Ø-Auftragswert × Verlust-Anteil. <b>Realisierbar mit infeos</b> = 70&nbsp;% der adressierbaren
+            Verluste — bewusst vorsichtig, weil kein Projekt über Nacht 100&nbsp;% hebt. Zahlen, Daten, Fakten — kein Bauchgefühl.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE PROOF -->
+      <section class="case-proof">
+        <div class="case-proof__eyebrow"><span class="dash"></span> So haben wir das bei einem Kunden gelöst</div>
+        <div class="case-proof__grid">
+          <div>
+            <div class="case-proof__stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="case-proof__text">„Wir haben monatelang von Hand Angebote verglichen und Daten gepflegt. infeos hat das in einen
+              KI-Prozess gegossen — heute läuft das in Sekunden, und mein Team arbeitet endlich am Kunden statt an Excel."</p>
+            <div class="case-proof__author"><b>Mittelständisches Unternehmen</b><span>Geschäftsführung · Südtirol</span></div>
+          </div>
+          <div class="case-proof__result">
+            <div class="case-proof__line"><span>Vorher: manuelle Routine</span><b>~ 140 h / Monat</b></div>
+            <div class="case-proof__line"><span>Nachher: mit KI</span><b class="hl">~ 18 h / Monat</b></div>
+            <div class="case-proof__line"><span>Produktivitätsschub</span><b class="hl">+ 60 %</b></div>
+            <div class="case-proof__line"><span>Erster Erfolg nach</span><b class="hl">4 Wochen</b></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <div class="final-cta">
+        <div class="final-cta__glow" aria-hidden="true"></div>
+        <div class="final-cta__content">
+          <span class="eyebrow"><span class="dot"></span>Dein nächster Schritt</span>
+          <h2 class="section-title">Lass uns deinen größten Hebel<br><span class="grad-text">in einen Plan verwandeln.</span></h2>
+          <p class="lead">15 Minuten Telefon. Wir gehen deine Auswertung gemeinsam durch und zeigen dir, welcher Use Case sich bei dir am schnellsten rechnet — ohne Verpflichtung.</p>
+          <div class="final-cta__actions">
+            <a href="#kontakt" class="btn btn--lg">Kostenfreies Erstgespräch
+              <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="tel:+393273220377" class="btn btn--ghost btn--lg">+39 327 3220377</a>
+          </div>
+        </div>
+        <div class="final-cta__contact">
+          <h4 class="mono">infeos GmbH</h4>
+          <p class="contact-block">Mustergasse 22<br>39100 Bozen · Südtirol<br><a href="mailto:fakturo@infeos.eu">fakturo@infeos.eu</a></p>
+        </div>
+      </div>
+
+      <div class="recalc"><button type="button" id="recalcBtn">↑ Werte ändern &amp; neu berechnen</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= USE CASES ============================= -->
+<section class="section-pad" id="usecases">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>KI Beispiele &amp; Use Cases</span>
+      <h2 class="section-title">Echte Anwendungen aus dem<br>Alltag von Unternehmen.</h2>
+      <p class="lead">Keine Spielereien. Das sind Hebel, die wir bei Kunden umgesetzt haben — messbar, sofort wirksam.</p>
+    </div>
+
+    <div class="usecase-grid">
+      <article class="usecase card-glass reveal" data-delay="1">
+        <div class="usecase__icon">📑</div>
+        <h3>Hunderte Dokumente in Sekunden vergleichen</h3>
+        <p>Verträge, Angebote, Ausschreibungen, Datenblätter — KI liest, vergleicht und markiert Abweichungen, wofür ein Team Tage braucht.</p>
+        <span class="usecase__metric">bis zu <b>95 %</b> Zeitersparnis bei Recherche</span>
+      </article>
+      <article class="usecase card-glass reveal" data-delay="2">
+        <div class="usecase__icon">💬</div>
+        <h3>Interaktiver Bot für Service &amp; Support</h3>
+        <p>Ein Bot auf deiner Webseite, der deine Produkte kennt, qualifiziert, terminiert und 24/7 antwortet — angebunden an deine Daten.</p>
+        <span class="usecase__metric"><b>+60 %</b> Produktivitätsschub im Service</span>
+      </article>
+      <article class="usecase card-glass reveal" data-delay="3">
+        <div class="usecase__icon">🧠</div>
+        <h3>Firmenwissen für alle nutzbar machen</h3>
+        <p>Jeder Mitarbeiter arbeitet „irgendwie" mit seinem Wissen. KI kanalisiert die Info-Flut und macht Expertenwissen für das ganze Team verfügbar.</p>
+        <span class="usecase__metric">Schluss mit Wissens-Silos</span>
+      </article>
+      <article class="usecase card-glass reveal" data-delay="1">
+        <div class="usecase__icon">⚙️</div>
+        <h3>Prozesse &amp; CRM automatisieren</h3>
+        <p>Datenpflege, Copy-Paste zwischen Systemen, Standard-Mails, Reporting — KI übernimmt die wiederkehrende Klick-Arbeit zuverlässig.</p>
+        <span class="usecase__metric">Stunden/Woche zurück pro Mitarbeiter</span>
+      </article>
+      <article class="usecase card-glass reveal" data-delay="2">
+        <div class="usecase__icon">🛒</div>
+        <h3>Webseiten &amp; Webshops mit KI</h3>
+        <p>Produktbeschreibungen, Personalisierung, Such-Assistenten und Schnittstellen — wir bauen Webseiten, die mitdenken und verkaufen.</p>
+        <span class="usecase__metric">mehr Conversion, weniger Aufwand</span>
+      </article>
+      <article class="usecase card-glass reveal" data-delay="3">
+        <div class="usecase__icon">🔌</div>
+        <h3>Software, APIs &amp; Schnittstellen</h3>
+        <p>Wir verbinden KI mit deinen Datenbanken und bestehenden Systemen — saubere Architektur, schnelle Anpassungen. Software seit 1986.</p>
+        <span class="usecase__metric">individuelle Problemlösungen mit KI</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STATS ============================= -->
+<section class="section-pad-sm">
+  <div class="container">
+    <div class="stats-strip reveal">
+      <div class="stat">
+        <div class="stat__num" data-counter data-to="8" data-suffix="×">0</div>
+        <div class="stat__label">ROI der besten 5 % der Unternehmen <small>(Ø liegt bei nur 3,35)</small></div>
+      </div>
+      <div class="stat">
+        <div class="stat__num" data-counter data-to="60" data-suffix="%">0</div>
+        <div class="stat__label">Produktivitätsschub durch interaktive Bots</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num" data-counter data-to="1986" data-plain="1">0</div>
+        <div class="stat__label">entwickeln wir Software — wir haben alles mitgemacht</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num" data-counter data-to="4" data-plain="1">0</div>
+        <div class="stat__label">Wochen bis zum ersten messbaren KI-Erfolg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= LEISTUNGEN ============================= -->
+<section class="section-pad" id="leistungen">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Was wir für dich tun</span>
+      <h2 class="section-title">Beratung ist nett.<br><span class="grad-text">Wir setzen um.</span></h2>
+      <p class="lead">Viele hören bei der Beratung auf. Wir integrieren KI in bestehende Prozesse — egal welche Unternehmensgröße. Ohne TamTam, mit viel KnowHow.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service card-glass service--feature reveal" data-delay="1">
+        <span class="service__tag mono">01 · Kerngeschäft</span>
+        <h3>KI in Unternehmen — jetzt viel einfacher</h3>
+        <p>Künstliche Intelligenz ist nicht neu. Aber die Anwendungen sind so einfach geworden wie nie. Wir führen KI ein, binden sie an, optimieren sie für dein Unternehmen — Einführung, Anbindung, API, Schnittstellen.</p>
+        <ul class="service__list">
+          <li>Bots, Service &amp; Support auf Webseiten</li>
+          <li>Prozesse im Unternehmen besser mit KI</li>
+          <li>Anbindung an deine Datenbanken</li>
+        </ul>
+        <a href="#rechner" class="link-arrow">KI-Potenzial für dein Unternehmen →</a>
+      </article>
+
+      <article class="service card-glass reveal" data-delay="2">
+        <span class="service__tag mono">02 · Software</span>
+        <h3>Softwareentwicklung — klassisch oder mit KI</h3>
+        <p>Softwareentwicklung mit KI ist anders, besser, schneller. Die Intelligenz eines guten Programmierer-Gehirns ersetzt sie (noch) nicht — aber sie beschleunigt alles enorm.</p>
+        <ul class="service__list">
+          <li>Agile Systemarchitekturen</li>
+          <li>Schnelle Anpassungen</li>
+          <li>Schnittstellen &amp; APIs</li>
+        </ul>
+        <a href="#kontakt" class="link-arrow">KI in der Softwareentwicklung →</a>
+      </article>
+
+      <article class="service card-glass reveal" data-delay="3">
+        <span class="service__tag mono">03 · Umsetzung</span>
+        <h3>KI-Umsetzung &amp; Integration</h3>
+        <p>Wir integrieren KI-Lösungen in deine bestehenden Prozesse — sauber, sicher, produktiv. Vom Pilotprojekt bis zum vollen Rollout.</p>
+        <ul class="service__list">
+          <li>Webseiten &amp; Webshops mit KI</li>
+          <li>Individuelle Problemlösungen</li>
+          <li>Kosten-Nutzen-Test als Pilotprojekt</li>
+        </ul>
+        <a href="#kontakt" class="link-arrow">Umsetzung anfragen →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= KI-TOOL ============================= -->
+<section class="section-pad tool-section">
+  <div class="container tool-grid">
+    <div class="tool-copy reveal">
+      <span class="eyebrow"><span class="dot"></span>Unser KI-Tool</span>
+      <h2 class="section-title">Herausforderungen von KI —<br><span class="grad-text">gelöst in einer App.</span></h2>
+      <p class="lead">KI kann mit ganz wenig Vorbereitung starten — leichter, als du denkst. Kein Vorwissen, keine tiefgreifenden Kenntnisse. Anklicken und loslegen. Sag einfach „ich habe ein Problem" — und schon beginnt die Lösung.</p>
+      <div class="tool-features">
+        <div class="tool-feature"><span class="tool-feature__ico">🔐</span><div><b>Berechtigungsstufen</b><span>Jeder sieht genau das, was er sehen darf.</span></div></div>
+        <div class="tool-feature"><span class="tool-feature__ico">🕶️</span><div><b>Anonymisierungs&shy;layer</b><span>Sensible Daten bleiben geschützt — DSGVO-konform.</span></div></div>
+        <div class="tool-feature"><span class="tool-feature__ico">⚡</span><div><b>Sofort startklar</b><span>Anklicken, Problem nennen, Lösung bekommen.</span></div></div>
+        <div class="tool-feature"><span class="tool-feature__ico">🧩</span><div><b>Viele feine Annehmlichkeiten</b><span>Durchdacht bis ins Detail — für alle Mitarbeiter.</span></div></div>
+      </div>
+    </div>
+
+    <aside class="tool-questions card-glass reveal" data-delay="2">
+      <h3>Die drängendsten Fragen — beantwortet</h3>
+      <ul class="qlist">
+        <li><span class="qlist__q">Wie integriere ich KI in bestehende Prozesse?</span><span class="qlist__a">Wir analysieren, planen, setzen um — ohne deinen Betrieb zu stören.</span></li>
+        <li><span class="qlist__q">Wie bin ich sicher, dass KI richtige Antworten gibt?</span><span class="qlist__a">Anbindung an deine Daten + Kontroll- und Prüflayer statt Halluzinationen.</span></li>
+        <li><span class="qlist__q">Was ist mit Sicherheit &amp; Datenschutz?</span><span class="qlist__a">Berechtigungsstufen, Anonymisierung, klare Datenwege — eingebaut.</span></li>
+        <li><span class="qlist__q">Wie messe ich den Erfolg?</span><span class="qlist__a">Mit Zahlen. Genau dafür haben wir den KI-Verlustrechner gebaut.</span></li>
+      </ul>
+      <a href="#rechner" class="btn btn--block">Erfolg messbar machen →</a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================= VORGEHEN ============================= -->
+<section class="section-pad" id="vorgehen">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="dot"></span>Wie führt man KI ein?</span>
+      <h2 class="section-title">Der 5-Punkte-Plan.</h2>
+      <p class="lead">Es beginnt mit der Analyse der Prozesse und endet mit der Auswertung der eingeführten Veränderungen.</p>
+    </div>
+
+    <ol class="process">
+      <li class="process__step reveal" data-delay="1">
+        <span class="process__num mono">01</span>
+        <h3>Prozesse analysieren</h3>
+        <p>Wir schauen, wo wirklich Zeit, Geld und Nerven verloren gehen — datenbasiert, nicht aus dem Bauch.</p>
+      </li>
+      <li class="process__step reveal" data-delay="2">
+        <span class="process__num mono">02</span>
+        <h3>Strategie &amp; Plan</h3>
+        <p>Wo ist der größte Hebel für den schnellsten Erfolg? Daraus bauen wir deinen konkreten KI-Plan.</p>
+      </li>
+      <li class="process__step reveal" data-delay="3">
+        <span class="process__num mono">03</span>
+        <h3>Pilot / Kosten-Nutzen-Test</h3>
+        <p>Ein Pilotprojekt, mit deinen Daten angelernt, das eines deiner echten Probleme angeht. Bringt KI den Nutzen?</p>
+      </li>
+      <li class="process__step reveal" data-delay="4">
+        <span class="process__num mono">04</span>
+        <h3>Integration &amp; Rollout</h3>
+        <p>Wir integrieren in bestehende Prozesse — mit Berechtigungen, Anonymisierung und Schnittstellen.</p>
+      </li>
+      <li class="process__step reveal" data-delay="5">
+        <span class="process__num mono">05</span>
+        <h3>Auswertung &amp; Skalierung</h3>
+        <p>Wir messen die Veränderung, optimieren nach — und skalieren, was funktioniert.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================= ZÖGERN ============================= -->
+<section class="section-pad-sm doubt-section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="dot"></span>Leichter als du denkst</span>
+      <h2 class="section-title">Dein Zögern hat 3 Gründe.<br><span class="grad-text">Lass sie uns auflösen.</span></h2>
+    </div>
+    <div class="doubt-grid">
+      <article class="doubt card-glass reveal" data-delay="1">
+        <span class="doubt__bad">„Zu komplex"</span>
+        <h3>KI startet mit ganz wenig Vorbereitung.</h3>
+        <p>Kein Vorwissen, keine tiefgreifenden Kenntnisse. Anklicken und loslegen — wir nehmen dir die Komplexität ab.</p>
+      </article>
+      <article class="doubt card-glass reveal" data-delay="2">
+        <span class="doubt__bad">„Investition unklar"</span>
+        <h3>Du rechnest es vorher aus.</h3>
+        <p>Mit dem KI-Verlustrechner siehst du Kosten und Einsparpotenzial schwarz auf weiß — bevor du einen Euro investierst.</p>
+        <a href="#rechner" class="link-arrow">Jetzt durchrechnen →</a>
+      </article>
+      <article class="doubt card-glass reveal" data-delay="3">
+        <span class="doubt__bad">„Chancen nicht bewusst"</span>
+        <h3>Wir zeigen dir genau deinen Hebel.</h3>
+        <p>Du erfährst, wo bei dir das größte Potenzial liegt — mit konkreten Use Cases für den Anfang.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ÜBER UNS ============================= -->
+<section class="section-pad" id="ueber">
+  <div class="container about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow"><span class="dot"></span>infeos · aus Bozen, Südtirol</span>
+      <h2 class="section-title">Junge Kreative,<br>alte Hasen — <span class="grad-text">volle Power.</span></h2>
+      <p class="lead">Das Team der infeos besteht aus unterschiedlichsten Charakteren, die sich gegenseitig beflügeln.
+        Wir entwickeln seit <b>1986</b> Software — wer kann sich daran noch erinnern? Wir haben schon alles
+        mitgemacht und sind aktuell im <b>KI-Fieber</b>.</p>
+      <div class="about-points">
+        <div class="about-point"><b>Zertifiziert</b><span>Universität Helsinki — „Elements of AI"</span></div>
+        <div class="about-point"><b>Seit 1986</b><span>Software-Erfahrung über alle Tech-Wellen</span></div>
+        <div class="about-point"><b>Südtirol</b><span>KI für die Region — und weit darüber hinaus</span></div>
+      </div>
+    </div>
+    <aside class="about-cert card-glass reveal" data-delay="2">
+      <div class="cert-badge">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z" fill="url(#lg)"/></svg>
+        <span class="mono">CERTIFIED</span>
+      </div>
+      <h3>Zertifikat für KI</h3>
+      <p>Wir sind von der <b>Universität Helsinki</b> für KI zertifiziert — fundiertes Wissen statt Buzzwords.</p>
+      <div class="cert-meta mono">University of Helsinki · Building AI / Elements of AI</div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================= FINAL CTA / KONTAKT ============================= -->
+<section class="section-pad" id="kontakt">
+  <div class="container">
+    <div class="final-cta reveal">
+      <div class="final-cta__glow" aria-hidden="true"></div>
+      <div class="final-cta__content">
+        <span class="eyebrow"><span class="dot"></span>Dein nächster Schritt</span>
+        <h2 class="section-title">Du siehst, was fehlende KI kostet.<br><span class="grad-text">Wir zeigen dir, wie du es zurückholst.</span></h2>
+        <p class="lead">15 Minuten Telefon. Wir schauen gemeinsam, wo dein größter KI-Hebel liegt und ob wir der richtige Partner für die Umsetzung sind. Ohne Verpflichtung.</p>
+        <div class="final-cta__actions">
+          <a href="#rechner" class="btn btn--lg">KI-Verlust berechnen
+            <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="tel:+393273220377" class="btn btn--ghost btn--lg">+39 327 3220377</a>
+        </div>
+      </div>
+      <div class="final-cta__contact">
+        <h4 class="mono">Anschrift &amp; Kontakt</h4>
+        <p class="contact-block">
+          <b>infeos GmbH</b><br>
+          Mustergasse 22<br>
+          39100 Bozen · Südtirol, Italien
+        </p>
+        <p class="contact-block">
+          <a href="tel:+393273220377">+39 327 3220377</a><br>
+          <a href="mailto:fakturo@infeos.eu">fakturo@infeos.eu</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col footer__about">
+        <a href="#top" class="logo">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M14 30c-5 0-9-3.6-9-8.4 0-4.4 3.4-7.9 7.9-8.3C15 9.4 19 7 23.6 7c5.5 0 10 3.6 11 8.5 4.2.5 7.4 3.7 7.4 7.7 0 4.3-3.7 7.8-8.3 7.8H14Z" stroke="url(#lg)" stroke-width="2.2"/>
+            <circle cx="17" cy="20.5" r="1.7" fill="#38e1e6"/><circle cx="24" cy="20.5" r="1.7" fill="#16bcc4"/><circle cx="31" cy="20.5" r="1.7" fill="#7b5cff"/>
+          </svg>
+          <span><span class="logo__word">infeos<sup>®</sup></span><span class="logo__tag">ideen in software</span></span>
+        </a>
+        <p>Künstliche Intelligenz, die sich rechnet. Wir machen KI in deinem Unternehmen messbar, sicher und produktiv — von der Analyse bis zur Umsetzung.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#problem">Was kann KI</a></li>
+          <li><a href="#usecases">Use Cases</a></li>
+          <li><a href="#rechner">KI-Rechner</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#vorgehen">Vorgehen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#leistungen">KI für Unternehmen</a></li>
+          <li><a href="#leistungen">Softwareentwicklung</a></li>
+          <li><a href="#leistungen">KI-Integration</a></li>
+          <li><a href="#usecases">Bots &amp; Webseiten</a></li>
+          <li><a href="#usecases">APIs &amp; Schnittstellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li>infeos GmbH</li>
+          <li>Mustergasse 22</li>
+          <li>39100 Bozen, Südtirol</li>
+          <li><a href="tel:+393273220377">+39 327 3220377</a></li>
+          <li><a href="mailto:fakturo@infeos.eu">fakturo@infeos.eu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> infeos GmbH · Alle Rechte vorbehalten</span>
+      <span class="footer__legal"><a href="#">Impressum</a> · <a href="#">Datenschutzerklärung</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile CTA -->
+<a href="#rechner" class="sticky-cta" aria-label="KI-Verlust berechnen">
+  <span>Was kostet dich fehlende KI?</span>
+  <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" defer></script>
+<script src="main.js" defer></script>
+<script src="rechner.js" defer></script>
+</body>
+</html>
