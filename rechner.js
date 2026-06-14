@@ -6,10 +6,10 @@
   'use strict';
 
   /* ----- CONFIG ----- */
-  // TODO infeos: hier euren Web3Forms Access-Key eintragen (https://web3forms.com — kostenlos).
+  // Web3Forms Access-Key — zentral in index.html (window.WEB3FORMS_KEY) gesetzt.
   // Solange der Platzhalter steht, wird das PDF erzeugt & heruntergeladen, aber keine
   // E-Mail-Benachrichtigung verschickt.
-  const WEB3FORMS_KEY = 'REPLACE-WITH-INFEOS-WEB3FORMS-KEY';
+  const WEB3FORMS_KEY = window.WEB3FORMS_KEY || 'REPLACE-WITH-INFEOS-WEB3FORMS-KEY';
 
   const WEEKS = 4.33;                 // Wochen pro Monat
   const WORK_HOURS_PER_YEAR = 1700;   // produktive Stunden / Jahr

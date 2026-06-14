@@ -89,8 +89,72 @@
     if (el) setupCounter(el);
   });
 
+  /* ---- Contact form (Web3Forms · kein Backend) ---- */
+  (function contactForm() {
+    const btn = document.getElementById('contactBtn');
+    if (!btn) return;
+    const KEY = window.WEB3FORMS_KEY || 'REPLACE-WITH-INFEOS-WEB3FORMS-KEY';
+    const g = (id) => document.getElementById(id);
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const setErr = (id, bad) => {
+      const f = g(id), e = g('ce_' + id.slice(2));
+      if (f) f.classList.toggle('error', bad);
+      if (e) e.classList.toggle('show', bad);
+    };
+    ['c_name', 'c_email', 'c_message'].forEach((id) => {
+      const el = g(id); if (el) el.addEventListener('input', () => setErr(id, false));
+    });
+    g('c_consent').addEventListener('change', () => g('ce_consent').classList.remove('show'));
+
+    btn.addEventListener('click', async () => {
+      const name = g('c_name').value.trim();
+      const email = g('c_email').value.trim();
+      const msg = g('c_message').value.trim();
+      let ok = true;
+      if (!name) { setErr('c_name', true); ok = false; }
+      if (!emailRe.test(email)) { setErr('c_email', true); ok = false; }
+      if (!msg) { setErr('c_message', true); ok = false; }
+      if (!g('c_consent').checked) { g('ce_consent').classList.add('show'); ok = false; }
+      if (!ok) { const fe = document.querySelector('#contactFormView .error'); if (fe) fe.focus(); return; }
+
+      btn.disabled = true; btn.style.opacity = '.7';
+      const orig = btn.innerHTML; btn.textContent = 'Senden …';
+      const firma = g('c_firma').value.trim();
+      const telefon = g('c_telefon').value.trim();
+      const thema = g('c_thema').value;
+
+      let status = 'no-key';
+      if (KEY && KEY.indexOf('REPLACE') !== 0) {
+        const fd = new FormData();
+        fd.append('access_key', KEY);
+        fd.append('subject', `[Kontakt] ${name}${firma ? ' · ' + firma : ''}${thema ? ' — ' + thema : ''}`);
+        fd.append('from_name', 'infeos · Kontaktformular');
+        fd.append('name', name);
+        fd.append('email', email);
+        fd.append('telefon', telefon);
+        fd.append('firma', firma);
+        fd.append('thema', thema);
+        fd.append('message', `Name: ${name}\nFirma: ${firma || '—'}\nE-Mail: ${email}\nTelefon: ${telefon || '—'}\nThema: ${thema || '—'}\n\n${msg}`);
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body: fd });
+          const j = await res.json().catch(() => ({}));
+          status = (res.ok && j.success !== false) ? 'ok' : 'fail';
+        } catch (e) { status = 'fail'; }
+      }
+
+      g('contactFormView').style.display = 'none';
+      g('contactSuccess').classList.add('show');
+      const note = g('contactSuccessNote');
+      if (status === 'no-key') note.textContent = '(Demo: Web3Forms-Key noch nicht hinterlegt — Anfrage wurde noch nicht verschickt.)';
+      else if (status === 'fail') note.textContent = '(Versand aktuell nicht erreichbar — bitte per E-Mail oder Telefon melden.)';
+      else note.textContent = '';
+      btn.disabled = false; btn.style.opacity = '1'; btn.innerHTML = orig;
+      g('contactSuccess').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    });
+  })();
+
   /* ---- Active nav link on scroll-spy ---- */
-  const sections = ['problem', 'usecases', 'rechner', 'leistungen', 'vorgehen', 'ueber']
+  const sections = ['problem', 'usecases', 'rechner', 'leistungen', 'ueber', 'kontakt']
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const navLinks = document.querySelectorAll('.nav__links a');

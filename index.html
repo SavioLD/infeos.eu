@@ -17,6 +17,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+
+<!-- ⚙️ infeos Konfiguration — HIER euren kostenlosen Web3Forms Access-Key eintragen (https://web3forms.com).
+     EIN Schlüssel für Kontaktformular UND KI-Rechner. Solange der Platzhalter steht, funktioniert
+     alles (PDF, Validierung, Erfolgsmeldung) — nur der E-Mail-Versand wird übersprungen. -->
+<script>window.WEB3FORMS_KEY = "REPLACE-WITH-INFEOS-WEB3FORMS-KEY";</script>
 </head>
 <body>
 <div class="bg-atmosphere"></div>
@@ -46,8 +51,8 @@
       <a href="#usecases">Use Cases</a>
       <a href="#rechner">KI-Rechner</a>
       <a href="#leistungen">Leistungen</a>
-      <a href="#vorgehen">Vorgehen</a>
       <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
 
     <div class="nav__right">
@@ -64,9 +69,12 @@
   <a href="#usecases">Use Cases</a>
   <a href="#rechner">KI-Rechner</a>
   <a href="#leistungen">Leistungen</a>
-  <a href="#vorgehen">Vorgehen</a>
   <a href="#ueber">Über uns</a>
-  <a href="#rechner" class="btn">KI-Rechner starten →</a>
+  <a href="#kontakt">Kontakt</a>
+  <div class="mobile-menu__cta">
+    <a href="#rechner" class="btn btn--ghost">KI-Rechner</a>
+    <a href="#kontakt" class="btn">Anfrage starten →</a>
+  </div>
 </div>
 
 <main id="top">
@@ -786,33 +794,101 @@
   </div>
 </section>
 
-<!-- ============================= FINAL CTA / KONTAKT ============================= -->
+<!-- ============================= KONTAKT (Formular) ============================= -->
 <section class="section-pad" id="kontakt">
   <div class="container">
-    <div class="final-cta reveal">
-      <div class="final-cta__glow" aria-hidden="true"></div>
-      <div class="final-cta__content">
-        <span class="eyebrow"><span class="dot"></span>Dein nächster Schritt</span>
-        <h2 class="section-title">Du siehst, was fehlende KI kostet.<br><span class="grad-text">Wir zeigen dir, wie du es zurückholst.</span></h2>
-        <p class="lead">15 Minuten Telefon. Wir schauen gemeinsam, wo dein größter KI-Hebel liegt und ob wir der richtige Partner für die Umsetzung sind. Ohne Verpflichtung.</p>
-        <div class="final-cta__actions">
-          <a href="#rechner" class="btn btn--lg">KI-Verlust berechnen
-            <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="contact-grid">
+      <!-- Pitch + Trust + Details -->
+      <div class="contact-intro reveal">
+        <span class="eyebrow"><span class="dot"></span>Kontakt · kostenlos &amp; unverbindlich</span>
+        <h2 class="section-title">Lass uns über dein<br><span class="grad-text">KI-Projekt sprechen.</span></h2>
+        <p class="lead">Schreib uns kurz, worum's geht — wir melden uns <b>innerhalb von 24&nbsp;Stunden</b> mit einer
+          ehrlichen Ersteinschätzung. Kein Verkaufsdruck, kein TamTam.</p>
+        <ul class="contact-trust">
+          <li><span class="tick">✓</span> Antwort innerhalb von <b>24&nbsp;Stunden</b></li>
+          <li><span class="tick">✓</span> Kostenlos &amp; unverbindlich</li>
+          <li><span class="tick">✓</span> Direkt mit einem KI-Experten — zertifiziert (Uni&nbsp;Helsinki)</li>
+          <li><span class="tick">✓</span> Software seit 1986 · aus Bozen, Südtirol</li>
+        </ul>
+        <div class="contact-details">
+          <a href="tel:+393273220377" class="contact-detail">
+            <span class="contact-detail__ico">📞</span>
+            <span><small>Anrufen</small><b>+39 327 3220377</b></span>
           </a>
-          <a href="tel:+393273220377" class="btn btn--ghost btn--lg">+39 327 3220377</a>
+          <a href="mailto:fakturo@infeos.eu" class="contact-detail">
+            <span class="contact-detail__ico">✉️</span>
+            <span><small>E-Mail</small><b>fakturo@infeos.eu</b></span>
+          </a>
+          <div class="contact-detail">
+            <span class="contact-detail__ico">📍</span>
+            <span><small>Anschrift</small><b>Mustergasse 22 · 39100 Bozen</b></span>
+          </div>
         </div>
+        <p class="contact-alt">Lieber erst Zahlen sehen? <a href="#rechner" class="link-arrow">Zum KI-Rechner →</a></p>
       </div>
-      <div class="final-cta__contact">
-        <h4 class="mono">Anschrift &amp; Kontakt</h4>
-        <p class="contact-block">
-          <b>infeos GmbH</b><br>
-          Mustergasse 22<br>
-          39100 Bozen · Südtirol, Italien
-        </p>
-        <p class="contact-block">
-          <a href="tel:+393273220377">+39 327 3220377</a><br>
-          <a href="mailto:fakturo@infeos.eu">fakturo@infeos.eu</a>
-        </p>
+
+      <!-- Formular -->
+      <div class="contact-card reveal" data-delay="2">
+        <div class="contact-card__glow" aria-hidden="true"></div>
+        <div id="contactFormView">
+          <h3 class="contact-card__title">Anfrage starten</h3>
+          <p class="contact-card__sub">Felder mit <span class="req">*</span> bitte ausfüllen.</p>
+          <div class="lead-form">
+            <div class="lead-field">
+              <label for="c_name">Name <span class="req">*</span></label>
+              <input type="text" id="c_name" autocomplete="name" />
+              <span class="err" id="ce_name">Bitte Namen angeben</span>
+            </div>
+            <div class="lead-field">
+              <label for="c_firma">Firma</label>
+              <input type="text" id="c_firma" autocomplete="organization" placeholder="optional" />
+            </div>
+            <div class="lead-field">
+              <label for="c_email">E-Mail <span class="req">*</span></label>
+              <input type="email" id="c_email" autocomplete="email" />
+              <span class="err" id="ce_email">Bitte gültige E-Mail-Adresse</span>
+            </div>
+            <div class="lead-field">
+              <label for="c_telefon">Telefon</label>
+              <input type="tel" id="c_telefon" autocomplete="tel" placeholder="optional" />
+            </div>
+            <div class="lead-field full">
+              <label for="c_thema">Wobei können wir helfen?</label>
+              <select id="c_thema">
+                <option value="">— bitte wählen —</option>
+                <option>KI-Beratung &amp; Strategie</option>
+                <option>KI in Prozesse integrieren</option>
+                <option>Interaktiver Bot / Webseite</option>
+                <option>Softwareentwicklung / API</option>
+                <option>Kosten-Nutzen-Test / Pilot</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="lead-field full">
+              <label for="c_message">Deine Nachricht <span class="req">*</span></label>
+              <textarea id="c_message" rows="4" placeholder="Worum geht's? Ein paar Sätze reichen."></textarea>
+              <span class="err" id="ce_message">Bitte kurz beschreiben</span>
+            </div>
+            <div class="consent">
+              <input type="checkbox" id="c_consent" />
+              <label for="c_consent">Ich bin mit der Verarbeitung meiner Daten zur Bearbeitung der Anfrage einverstanden. Hinweise in der Datenschutzerklärung.</label>
+            </div>
+            <span class="err" id="ce_consent" style="grid-column:1/-1; margin-top:-6px;">Bitte bestätigen</span>
+            <div class="lead-card__actions">
+              <button type="button" class="btn btn--block" id="contactBtn">
+                Anfrage senden
+                <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span class="lead-card__trust">DSGVO-konform · keine Weitergabe · Antwort in 24&nbsp;h</span>
+            </div>
+          </div>
+        </div>
+        <div class="lead-card__success" id="contactSuccess">
+          <div class="lead-card__success-icon">✓</div>
+          <h3>Danke — Anfrage ist raus!</h3>
+          <p>Wir melden uns innerhalb von 24&nbsp;Stunden bei dir. Wenn's eilig ist: <a href="tel:+393273220377">+39&nbsp;327&nbsp;3220377</a>.</p>
+          <p id="contactSuccessNote" class="mono" style="font-size:12px;color:var(--muted);margin-top:10px;"></p>
+        </div>
       </div>
     </div>
   </div>

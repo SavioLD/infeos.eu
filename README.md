@@ -9,13 +9,14 @@ neu interpretiert als modernes, hochwertiges Agentur-Design.
 ## Struktur
 
 ```
-/ (Repo-Root, flach)
-├── index.html      ← komplette One-Page-Site INKL. integriertem KI-Rechner (#rechner)
+/ (Repo-Root)
+├── index.html          ← komplette One-Page-Site INKL. integriertem KI-Rechner (#rechner)
 ├── styles.css      ← Design-System + Landing- + Rechner-Sektionen
-├── main.js         ← Nav, Mobile-Menü, Scroll-Reveal, Counter
-├── rechner.js      ← Rechner-Logik, Live-Vorschau, Lead-Gate, PDF
+├── main.js          ← Nav, Mobile-Menü, Scroll-Reveal, Counter
+├── rechner.js       ← Rechner-Logik, Live-Vorschau, Lead-Gate, PDF
 ├── favicon.svg
-├── CNAME · robots.txt · sitemap.xml
+├── CNAME               ← infeos.eu (für GitHub Pages Custom Domain)
+├── robots.txt · sitemap.xml
 └── README.md
 ```
 
@@ -38,7 +39,7 @@ rein mathematisch aus den Eingaben des Nutzers.
 6. Absenden → **gebrandetes PDF wird erzeugt & sofort heruntergeladen**,
    Lead-Daten gehen per Web3Forms an infeos, die Aufschlüsselung wird freigeschaltet.
 
-**Rechenmodell** (`compute()` in `js/rechner.js`):
+**Rechenmodell** (`compute()` in `rechner.js`):
 
 ```
 Verlust/Monat = manuelle Routine + Datenpflege + bot-fähiger Service
@@ -50,25 +51,38 @@ Realisierbar = Verlust × 0,70   (konservativer Realisierungsgrad)
 ```
 
 Alle Annahmen (4,33 Wo/Monat, 1.700 produktive Std/Jahr, 70 % Realisierung) sind
-oben in `js/rechner.js` als Konstanten gesetzt und leicht anpassbar.
+oben in `rechner.js` als Konstanten gesetzt und leicht anpassbar.
 Branchen-Voreinstellungen (`BRANCHE`) setzen sinnvolle Startwerte je Branche.
 
-## ⚙️ Vor dem Live-Gang: Web3Forms-Key eintragen
+## Kein Backend nötig — funktioniert auch mobil über den GitHub-Link
 
-Damit die Lead-E-Mails ankommen, einen kostenlosen Access-Key bei
-<https://web3forms.com> anlegen (mit der Empfänger-Adresse, z. B. `fakturo@infeos.eu`)
-und in `js/rechner.js` eintragen:
+Alles läuft **clientseitig / statisch**: KI-Rechner, PDF-Erstellung (jsPDF),
+Validierung und beide Formulare. Das einzige externe Stück ist **Web3Forms**
+(SaaS-Endpoint, der das Formular als E-Mail zustellt) — kein eigener Server,
+keine Datenbank. Voll mobil-optimiert (Touch-Slider, einspaltige Formulare,
+iOS-sichere 16px-Felder, kompakte Sticky-Live-Bar).
 
-```js
-const WEB3FORMS_KEY = 'REPLACE-WITH-INFEOS-WEB3FORMS-KEY';
+## ⚙️ Vor dem Live-Gang: EIN Web3Forms-Key eintragen
+
+Kostenlosen Access-Key bei <https://web3forms.com> anlegen (mit Empfänger-Adresse,
+z. B. `fakturo@infeos.eu`). **Ein Schlüssel für Kontaktformular UND KI-Rechner** —
+zentral in **`index.html`** im `<head>`:
+
+```html
+<script>window.WEB3FORMS_KEY = "DEIN-KEY-HIER";</script>
 ```
 
-> Solange der Platzhalter steht, funktioniert alles — nur die E-Mail-Benachrichtigung
-> wird übersprungen (das PDF wird trotzdem erzeugt & heruntergeladen).
+> Solange der Platzhalter `REPLACE-…` steht, funktioniert alles (PDF, Validierung,
+> Erfolgsmeldung) — nur der **E-Mail-Versand** wird übersprungen. Beide Formulare
+> (Kontakt & Lead) zeigen dann einen dezenten Demo-Hinweis.
 
-Der Nutzer erhält das PDF **sofort als Download**. Wenn ihr zusätzlich automatisch
-das PDF per Mail an den Lead schicken wollt (Anhang), braucht es einen kleinen
-Serverless-Endpoint (z. B. Cloudflare Worker) — sag Bescheid, dann bauen wir das.
+**Zwei klar getrennte Wege:** Wer Zahlen sehen will → KI-Rechner (`#rechner`).
+Wer direkt anfragen will → **Kontaktformular** (`#kontakt`). Kein CTA schickt
+Kontakt-Interessenten mehr in den Rechner.
+
+Der Nutzer erhält das Rechner-PDF **sofort als Download**. Wenn ihr zusätzlich
+automatisch das PDF per Mail an den Lead schicken wollt (Anhang), braucht es einen
+kleinen Serverless-Endpoint (z. B. Cloudflare Worker) — sag Bescheid.
 
 ## Lokal anschauen
 

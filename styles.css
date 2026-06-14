@@ -738,3 +738,78 @@ select.field__select:focus { outline: none; border-color: var(--teal); }
 .recalc { text-align: center; margin-top: 8px; }
 .recalc button { font-family: var(--font-mono); font-size: 13px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 .recalc button:hover { color: var(--teal-bright); }
+
+/* ============================================================
+   CONTACT SECTION (#kontakt) — Formular
+   ============================================================ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 60px); align-items: start; }
+.contact-intro h2 { margin: 18px 0 18px; }
+.contact-trust { display: flex; flex-direction: column; gap: 12px; margin: 26px 0; }
+.contact-trust li { display: flex; gap: 11px; align-items: center; font-size: 15px; color: var(--text-soft); }
+.contact-trust .tick { flex: none; width: 22px; height: 22px; border-radius: 50%; background: rgba(56,225,230,.16); color: var(--teal-bright); display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+.contact-details { display: flex; flex-direction: column; gap: 11px; margin-bottom: 18px; }
+.contact-detail { display: flex; gap: 13px; align-items: center; padding: 11px 14px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); transition: border-color .25s var(--ease); }
+a.contact-detail:hover { border-color: rgba(56,225,230,.3); }
+.contact-detail__ico { font-size: 17px; width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 10px; background: rgba(56,225,230,.1); }
+.contact-detail small { display: block; font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+.contact-detail b { font-size: 14.5px; color: var(--text); }
+.contact-alt { font-size: 14px; color: var(--muted); }
+.contact-alt .link-arrow { font-size: 14px; }
+
+.contact-card { position: relative; background: linear-gradient(160deg, rgba(20,39,79,.9), rgba(10,20,48,.95)); border: 1px solid rgba(56,225,230,.3); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 40px); box-shadow: var(--shadow-card); overflow: hidden; }
+.contact-card__glow { position: absolute; top: -30%; right: -15%; width: 55%; height: 120%; background: radial-gradient(closest-side, rgba(56,225,230,.18), transparent 70%); pointer-events: none; z-index: 0; }
+.contact-card > * { position: relative; z-index: 1; }
+.contact-card__title { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 6px; }
+.contact-card__sub { font-size: 13.5px; color: var(--muted); margin-bottom: 22px; }
+.req { color: var(--magenta); }
+
+/* textarea reuses .lead-field look */
+.lead-field textarea { padding: 14px 16px; border-radius: 12px; background: rgba(8,16,38,.75); border: 1px solid var(--glass-border); color: var(--text); font-size: 15px; font-family: inherit; line-height: 1.55; resize: vertical; min-height: 110px; width: 100%; transition: border-color .2s; }
+.lead-field textarea:focus { outline: none; border-color: var(--teal); }
+.lead-field textarea.error { border-color: #ff5da2; }
+
+.mobile-menu__cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+.mobile-menu__cta .btn { flex: 1; min-width: 140px; justify-content: center; }
+
+@media (max-width: 880px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   MOBILE OPTIMIZATION (vollständig · funktioniert ohne Backend)
+   ============================================================ */
+@media (max-width: 760px) {
+  /* iOS: 16px verhindert Auto-Zoom beim Fokus */
+  .lead-field input, .lead-field select, .lead-field textarea,
+  select.field__select { font-size: 16px; }
+
+  /* Formulare einspaltig */
+  .lead-form { grid-template-columns: 1fr; }
+
+  /* Live-Bar kompakt + nicht zu hoch (bleibt sticky) */
+  .calc-embed .live-bar { top: 64px; }
+  .live-bar__inner { gap: 10px 16px; padding: 13px 16px; }
+  .live-bar__hint { display: none; }
+  .live-bar__num { font-size: 1.9rem; }
+
+  /* Ergebnis-Block: Bars aus, Werte groß genug */
+  .result-hero__year { width: 100%; gap: 14px; }
+  .result-hero__year div { flex: 1; min-width: 130px; }
+
+  /* Slider-Thumb fingerfreundlich vergrößern */
+  input[type=range] { height: 10px; }
+  input[type=range]::-webkit-slider-thumb { width: 28px; height: 28px; }
+  input[type=range]::-moz-range-thumb { width: 26px; height: 26px; }
+
+  /* Buttons in Reihen umbrechen statt überlaufen */
+  .hero__actions .btn, .final-cta__actions .btn { flex: 1; min-width: 100%; justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  .save-callout { grid-template-columns: 1fr; text-align: center; }
+  .save-callout__icon { margin: 0 auto; }
+  .calc-actions .btn { width: 100%; }
+  .lead-card, .contact-card { padding: 22px 18px; }
+  .result-hero { padding: 32px 18px; }
+  .field__top { gap: 8px; }
+}
