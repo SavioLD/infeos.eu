@@ -22,6 +22,8 @@
   --violet: #7b5cff;
   --magenta: #e0249a;
   --gold: #ffcc4d;
+  --blue: #2166ab;          /* Logo-Blau (Corporate) */
+  --blue-bright: #4a90d9;
 
   /* Text */
   --text: #f3f7ff;
@@ -30,7 +32,7 @@
   --muted-deep: #6275a0;
 
   /* Gradients */
-  --grad-brand: linear-gradient(120deg, #38e1e6 0%, #16bcc4 38%, #7b5cff 100%);
+  --grad-brand: linear-gradient(115deg, #4a90d9 0%, #16bcc4 100%);
   --grad-magenta: linear-gradient(135deg, #ff3db4 0%, #b3309f 45%, #7b5cff 100%);
   --grad-teal: linear-gradient(135deg, #38e1e6 0%, #16bcc4 60%, #1183c9 100%);
   --grad-text: linear-gradient(100deg, #ffffff 0%, #bfeef0 40%, #8fd0ff 100%);
@@ -42,8 +44,8 @@
 
   /* Effects */
   --shadow-card: 0 24px 60px -28px rgba(0, 0, 0, 0.75);
-  --shadow-glow-teal: 0 0 0 1px rgba(56, 225, 230, 0.2), 0 20px 60px -22px rgba(22, 188, 196, 0.55);
-  --shadow-glow-magenta: 0 24px 70px -30px rgba(224, 36, 154, 0.6);
+  --shadow-glow-teal: 0 0 0 1px rgba(56, 225, 230, 0.16), 0 18px 48px -26px rgba(22, 188, 196, 0.40);
+  --shadow-glow-magenta: 0 18px 54px -32px rgba(224, 36, 154, 0.42);
   --radius: 22px;
   --radius-lg: 30px;
   --radius-sm: 14px;
@@ -263,10 +265,11 @@ section { position: relative; }
 
 /* Logo */
 .logo { display: inline-flex; align-items: center; gap: 11px; }
-.logo__mark { width: 38px; height: 38px; flex: none; }
-.logo__word { font-family: var(--font-display); font-size: 25px; font-weight: 600; letter-spacing: -0.02em; color: #fff; }
-.logo__word sup { font-size: 0.5em; color: var(--teal-bright); top: -0.7em; }
-.logo__tag { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase; display: block; margin-top: -3px; }
+.logo__mark { width: 42px; height: 37px; flex: none; color: var(--blue-bright); }
+.logo__text { display: inline-flex; flex-direction: column; }
+.logo__word { font-family: "Baloo 2", var(--font-body); font-size: 24px; font-weight: 700; letter-spacing: -0.01em; color: #fff; line-height: 1; }
+.logo__word sup { font-size: 0.42em; color: var(--blue-bright); top: -0.9em; font-weight: 700; }
+.logo__tag { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.16em; color: var(--muted); text-transform: uppercase; display: block; margin-top: 3px; }
 
 /* Burger */
 .nav__burger { display: none; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--glass); place-items: center; }
@@ -813,3 +816,34 @@ a.contact-detail:hover { border-color: rgba(56,225,230,.3); }
   .result-hero { padding: 32px 18px; }
   .field__top { gap: 8px; }
 }
+
+/* ============================================================
+   RUHIGER FÜR INDUSTRIE & HANDWERK ("ein bisschen schlichter")
+   ============================================================ */
+/* dezentere Hintergrund-Atmosphäre (mehr Corporate-Blau, kein Magenta-Schein) */
+.bg-atmosphere {
+  background:
+    radial-gradient(58% 48% at 82% -8%, rgba(74,144,217,0.16), transparent 60%),
+    radial-gradient(52% 42% at 6% 6%, rgba(22,188,196,0.11), transparent 60%),
+    var(--navy-950);
+}
+.bg-grain { display: none; }                          /* Film-Korn raus */
+.hero__aurora { animation: none; opacity: .5; filter: blur(36px); }  /* statisch & dezent */
+
+/* Laufschrift ruhiger & langsamer */
+.trust-marquee { padding: 13px 0; }
+.trust-marquee__track { animation-duration: 72s; font-size: 15px; color: var(--muted-deep); }
+.trust-marquee__track .sep { color: var(--blue-bright); }
+
+/* Glows zurücknehmen */
+.pcard__glow { opacity: .5; }
+.pcard:hover .pcard__glow { opacity: .72; }
+.result-hero__glow, .calc-bridge__glow, .final-cta__glow,
+.lead-card__glow, .contact-card__glow { opacity: .6; }
+.hero-calc__bar span { box-shadow: none; }
+
+/* Buttons seriöser: kein Glanz-Sweep */
+.btn::after { display: none; }
+
+/* Chip-Punkt statt Emoji */
+.chip__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue-bright); flex: none; }

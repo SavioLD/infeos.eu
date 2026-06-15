@@ -15,7 +15,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Baloo+2:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 
 <!-- ⚙️ infeos Konfiguration — HIER euren kostenlosen Web3Forms Access-Key eintragen (https://web3forms.com).
@@ -30,17 +30,13 @@
 <!-- ============================= NAV ============================= -->
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a href="#top" class="logo" aria-label="infeos Startseite">
-      <svg class="logo__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="lg" x1="0" y1="0" x2="48" y2="48">
-            <stop offset="0" stop-color="#38e1e6"/><stop offset=".55" stop-color="#16bcc4"/><stop offset="1" stop-color="#7b5cff"/>
-          </linearGradient>
-        </defs>
-        <path d="M14 30c-5 0-9-3.6-9-8.4 0-4.4 3.4-7.9 7.9-8.3C15 9.4 19 7 23.6 7c5.5 0 10 3.6 11 8.5 4.2.5 7.4 3.7 7.4 7.7 0 4.3-3.7 7.8-8.3 7.8H14Z" stroke="url(#lg)" stroke-width="2.2"/>
-        <circle cx="17" cy="20.5" r="1.7" fill="#38e1e6"/><circle cx="24" cy="20.5" r="1.7" fill="#16bcc4"/><circle cx="31" cy="20.5" r="1.7" fill="#7b5cff"/>
+    <a href="#top" class="logo" aria-label="infeos – ideen in software">
+      <svg class="logo__mark" viewBox="0 0 64 56" fill="none" aria-hidden="true">
+        <path d="M18 42 C11 42 6 37 6 30.5 C6 25 10 20.5 15.5 19.8 C17 13 23 8 30.5 8 C38.5 8 45 13.5 46 21 C52.5 21.5 57 26 57 31.5 C57 37.5 52 42 45.5 42 Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="15" cy="48" r="2.6" stroke="currentColor" stroke-width="2.3"/>
+        <circle cx="8.5" cy="53" r="1.6" fill="currentColor"/>
       </svg>
-      <span>
+      <span class="logo__text">
         <span class="logo__word">infeos<sup>®</sup></span>
         <span class="logo__tag">ideen in software</span>
       </span>
@@ -101,9 +97,9 @@
         <a href="#kontakt" class="btn btn--ghost btn--lg">Kostenloses Erstgespräch</a>
       </div>
       <div class="hero__badges">
-        <span class="chip">📄 Hunderte Dokumente in Sekunden vergleichen</span>
-        <span class="chip">🤖 Interactive Bot · +60 % Produktivität</span>
-        <span class="chip">🎓 Zertifiziert · Universität Helsinki</span>
+        <span class="chip"><i class="chip__dot"></i>Hunderte Dokumente in Sekunden vergleichen</span>
+        <span class="chip"><i class="chip__dot"></i>Interaktiver Bot · +60 % Produktivität</span>
+        <span class="chip"><i class="chip__dot"></i>Zertifiziert · Universität Helsinki</span>
       </div>
     </div>
 
@@ -784,7 +780,7 @@
     </div>
     <aside class="about-cert card-glass reveal" data-delay="2">
       <div class="cert-badge">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z" fill="url(#lg)"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z" fill="#ffcc4d"/></svg>
         <span class="mono">CERTIFIED</span>
       </div>
       <h3>Zertifikat für KI</h3>
@@ -902,11 +898,12 @@
     <div class="footer__grid">
       <div class="footer__col footer__about">
         <a href="#top" class="logo">
-          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M14 30c-5 0-9-3.6-9-8.4 0-4.4 3.4-7.9 7.9-8.3C15 9.4 19 7 23.6 7c5.5 0 10 3.6 11 8.5 4.2.5 7.4 3.7 7.4 7.7 0 4.3-3.7 7.8-8.3 7.8H14Z" stroke="url(#lg)" stroke-width="2.2"/>
-            <circle cx="17" cy="20.5" r="1.7" fill="#38e1e6"/><circle cx="24" cy="20.5" r="1.7" fill="#16bcc4"/><circle cx="31" cy="20.5" r="1.7" fill="#7b5cff"/>
+          <svg class="logo__mark" viewBox="0 0 64 56" fill="none" aria-hidden="true">
+            <path d="M18 42 C11 42 6 37 6 30.5 C6 25 10 20.5 15.5 19.8 C17 13 23 8 30.5 8 C38.5 8 45 13.5 46 21 C52.5 21.5 57 26 57 31.5 C57 37.5 52 42 45.5 42 Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="15" cy="48" r="2.6" stroke="currentColor" stroke-width="2.3"/>
+            <circle cx="8.5" cy="53" r="1.6" fill="currentColor"/>
           </svg>
-          <span><span class="logo__word">infeos<sup>®</sup></span><span class="logo__tag">ideen in software</span></span>
+          <span class="logo__text"><span class="logo__word">infeos<sup>®</sup></span><span class="logo__tag">ideen in software</span></span>
         </a>
         <p>Künstliche Intelligenz, die sich rechnet. Wir machen KI in deinem Unternehmen messbar, sicher und produktiv — von der Analyse bis zur Umsetzung.</p>
       </div>
