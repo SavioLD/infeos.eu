@@ -40,7 +40,7 @@
   --radius-sm: 10px;
 
   /* Fonts */
-  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 
@@ -74,15 +74,15 @@ img, svg, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; background: none; border: none; }
-ul { list-style: none; }
+ul, ol { list-style: none; }
 ::selection { background: var(--blue); color: #fff; }
 
 /* ---------- Typography ---------- */
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); font-optical-sizing: auto; }
-.display { font-size: clamp(2.3rem, 5.2vw, 3.9rem); font-weight: 500; line-height: 1.04; }
-h2.section-title { font-size: clamp(1.8rem, 3.6vw, 2.7rem); }
-h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 600; }
-.serif-italic { font-style: italic; font-weight: 450; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.16; letter-spacing: -0.02em; color: var(--ink); text-wrap: balance; overflow-wrap: break-word; }
+.display { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.1; }
+h2.section-title { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; }
+h3 { font-size: clamp(1.18rem, 2vw, 1.45rem); font-weight: 700; }
+.serif-italic { font-style: normal; color: var(--blue); }
 
 /* Akzent-Wörter: solide Leitfarbe statt Verlauf */
 .grad-text, .grad-text-magenta { color: var(--blue); background: none; -webkit-background-clip: border-box; background-clip: border-box; }
@@ -554,3 +554,43 @@ input[type=range]:focus-visible { box-shadow: 0 0 0 3px rgba(31,99,170,.25); }
   .save-callout { grid-template-columns: 1fr; text-align: center; } .save-callout__icon { margin: 0 auto; }
 }
 @media (max-width: 700px) { .case-proof__grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   LESBARKEIT & SAUBERE UMBRÜCHE
+   ============================================================ */
+body { overflow-wrap: break-word; }
+p, .lead, li, .field__label small, .calc-section__desc, .methodology { text-wrap: pretty; }
+/* Zahlen/Display-Elemente in der Sans kräftig & sauber */
+.display, h1, h2, h3, h4 { text-wrap: balance; }
+.stat__num, .result-hero__num, .live-bar__num, .hero-calc__number,
+.block__sum, .field__val, .result-hero__year b, .calc-section__title { font-weight: 800; letter-spacing: -0.02em; }
+.case-proof__text { font-weight: 600; }
+.logo__word { letter-spacing: 0; }
+
+/* ============================================================
+   DEZENTE FARBAKZENTE — Potenzial-Karten
+   (Magenta · Violett · Teal · Blau, ganz leicht)
+   ============================================================ */
+.pcard { overflow: hidden; }
+.pcard > * { position: relative; z-index: 1; }
+.pcard__glow { display: block; position: absolute; inset: 0; z-index: 0; }
+.pcard--magenta { border-top-color: #d6398f; }
+.pcard--violet  { border-top-color: #6d5ce0; }
+.pcard--teal    { border-top-color: #138e95; }
+.pcard--blue    { border-top-color: var(--blue); }
+.pcard--magenta .pcard__num { color: #d6398f; }
+.pcard--violet  .pcard__num { color: #6d5ce0; }
+.pcard--teal    .pcard__num { color: #0f8e95; }
+.pcard--blue    .pcard__num { color: var(--blue); }
+.pcard--magenta .pcard__glow { background: radial-gradient(135% 135% at 100% 100%, rgba(214,57,143,0.10), transparent 60%); }
+.pcard--violet  .pcard__glow { background: radial-gradient(135% 135% at 100% 100%, rgba(109,92,224,0.10), transparent 60%); }
+.pcard--teal    .pcard__glow { background: radial-gradient(135% 135% at 100% 100%, rgba(19,142,149,0.10), transparent 60%); }
+.pcard--blue    .pcard__glow { background: radial-gradient(135% 135% at 100% 100%, rgba(47,127,209,0.10), transparent 60%); }
+
+/* passende Akzentfarbe für Use-Case-Icons (leicht variiert) */
+.usecase:nth-child(1) .usecase__icon { background: rgba(214,57,143,0.10); }
+.usecase:nth-child(2) .usecase__icon { background: rgba(109,92,224,0.10); }
+.usecase:nth-child(3) .usecase__icon { background: rgba(19,142,149,0.10); }
+.usecase:nth-child(4) .usecase__icon { background: rgba(47,127,209,0.10); }
+.usecase:nth-child(5) .usecase__icon { background: rgba(214,57,143,0.10); }
+.usecase:nth-child(6) .usecase__icon { background: rgba(19,142,149,0.10); }
